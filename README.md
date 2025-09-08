@@ -28,28 +28,94 @@ Transform your development workflow with enterprise-grade standards built-in. In
 - ✅ **Security headers** and Next.js optimization built-in
 - ✅ **Optimized for Cline** - Generate sophisticated apps with simple prompts
 
-## Quick Start
+## Prerequisites
 
-### Option 1: Use GitHub Template
-1. Click "Use this template" button above
-2. Clone your new repository
-3. Install dependencies:
+Before using this template, make sure you have:
+- **Node.js 18+** installed ([Download here](https://nodejs.org/))
+- **Git** installed ([Download here](https://git-scm.com/))
+- A **GitHub account** (for template usage)
+- **VS Code** with Cline extension (recommended)
+
+## 🚀 Quick Start
+
+### Method 1: Use as GitHub Template (Recommended)
+
+**Step 1: Create from Template**
+1. Click the **"Use this template"** button at the top of this page
+2. Choose **"Create a new repository"**
+3. Name your project (e.g., `my-awesome-app`)
+4. Choose public or private
+5. Click **"Create repository"**
+
+**Step 2: Clone and Setup**
 ```bash
+# Clone your new repository
+git clone https://github.com/YOUR-USERNAME/YOUR-PROJECT-NAME.git
+cd YOUR-PROJECT-NAME
+
 # Install required dependencies
 npm install clsx tailwind-merge class-variance-authority zod
 
 # Install development dependencies
 npm install -D @types/node @types/react @types/react-dom eslint eslint-config-next prettier typescript tailwindcss postcss autoprefixer tailwindcss-animate
 
-# Start development
+# Start development server
 npm run dev
 ```
 
-### Option 2: Copy to Existing Project
-1. Download this template
-2. Copy all files to your Next.js project
-3. Run the installation commands above
-4. You're ready to build!
+**Step 3: Start Building with Cline**
+Open your project in VS Code and start using Cline with prompts like:
+- *"Create a homepage with hero section and navigation"*
+- *"Build a contact form with validation"*
+- *"Generate a blog layout with post cards"*
+
+### Method 2: Add to Existing Next.js Project
+
+**Step 1: Download Template Files**
+1. Go to https://github.com/alicodex/cline-rules-nextjs-template
+2. Click **"Code"** → **"Download ZIP"**
+3. Extract the downloaded file
+
+**Step 2: Copy Essential Files**
+Copy these files to your Next.js project root:
+```
+✅ .clinerules              (Cline rules - most important!)
+✅ tsconfig.json            (TypeScript configuration)
+✅ tailwind.config.js       (Design system)
+✅ next.config.js           (Security & optimization)
+✅ postcss.config.js        (PostCSS configuration)
+✅ .eslintrc.json           (Code quality rules)
+✅ .prettierrc              (Code formatting)
+✅ src/lib/                 (Utility functions)
+✅ src/components/ui/       (Starter components)
+```
+
+**Step 3: Install Dependencies**
+```bash
+# Install required packages
+npm install clsx tailwind-merge class-variance-authority zod
+
+# Install dev dependencies (if not already installed)
+npm install -D tailwindcss postcss autoprefixer tailwindcss-animate
+```
+
+### Method 3: Start from Scratch
+
+**Step 1: Create Next.js Project**
+```bash
+# Create new Next.js project
+npx create-next-app@latest my-project --typescript --tailwind --eslint --app
+cd my-project
+```
+
+**Step 2: Add Template Files**
+Follow Method 2 steps above to copy template files.
+
+**Step 3: Install Additional Dependencies**
+```bash
+npm install clsx tailwind-merge class-variance-authority zod
+npm install -D tailwindcss-animate
+```
 
 ## What's Included
 
@@ -232,6 +298,46 @@ With these Cline rules, you can generate complete, professional applications wit
 | Basic styling patterns | Complete design system |
 
 **The result?** Professional, scalable Next.js applications generated at the speed of thought.
+
+## 🔧 Troubleshooting
+
+### Common Issues
+
+**"Cannot find module '@/components'"**
+- Make sure `tsconfig.json` is copied to your project root
+- Restart your development server: `npm run dev`
+- Verify the path aliases are configured correctly
+
+**"Tailwind classes not working"**
+- Ensure `tailwind.config.js` and `postcss.config.js` are in your project root
+- Restart your development server: `npm run dev`
+- Check that Tailwind CSS is installed: `npm list tailwindcss`
+
+**"ESLint errors after setup"**
+- Make sure `.eslintrc.json` is copied to your project
+- Run: `npm run lint --fix` to auto-fix issues
+- Restart VS Code if errors persist
+
+**"Button component not found"**
+- Copy the entire `src/` folder from the template
+- Make sure path aliases are working (see first issue above)
+- Verify the import path: `import { Button } from '@/components/ui/Button'`
+
+**"TypeScript errors in components"**
+- Ensure all dependencies are installed correctly
+- Run: `npm run type-check` to verify TypeScript setup
+- Make sure `@types/react` and `@types/react-dom` are installed
+
+**"Development server won't start"**
+- Check Node.js version: `node --version` (should be 18+)
+- Clear npm cache: `npm cache clean --force`
+- Delete `node_modules` and reinstall: `rm -rf node_modules && npm install`
+
+### Need Help?
+- 🐛 [Report bugs](https://github.com/alicodex/cline-rules-nextjs-template/issues)
+- 💬 [Ask questions](https://github.com/alicodex/cline-rules-nextjs-template/discussions)
+- 📖 Check the `setup-commands.txt` file for quick reference
+- 🎥 Watch setup tutorials (coming soon)
 
 ## Contributing
 
