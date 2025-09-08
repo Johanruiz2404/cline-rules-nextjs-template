@@ -7,6 +7,8 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4.14-38B2AC)](https://tailwindcss.com/)
 [![ESLint](https://img.shields.io/badge/ESLint-8.57.1-4B32C3)](https://eslint.org/)
 
+![Next.js Enterprise Template](Screenshot.png)
+
 ## ✨ Features
 
 - **🚀 Next.js 15.5.2** - Latest App Router with React 19
