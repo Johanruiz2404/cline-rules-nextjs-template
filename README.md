@@ -6,6 +6,8 @@
 > 
 > **Created by [Ali Coder/Ali Codex](https://x.com/Alicoder)** - Passionate about building tools that accelerate development workflows.
 
+![Next.js Enterprise Template for Cline](Screenshot.png)
+
 [![GitHub stars](https://img.shields.io/github/stars/alicodex/cline-rules-nextjs-template?style=for-the-badge&logo=github&color=yellow)](https://github.com/alicodex/cline-rules-nextjs-template/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
