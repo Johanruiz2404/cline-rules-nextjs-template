@@ -1,0 +1,65 @@
+# Next.js Enterprise Template - Setup Commands
+
+## Quick Setup Commands (Copy & Paste)
+
+### 1. Install Required Dependencies
+npm install clsx tailwind-merge class-variance-authority zod
+
+### 2. Install Development Dependencies (Optional but Recommended)
+npm install -D @types/node @types/react @types/react-dom eslint eslint-config-next prettier
+
+### 3. Add to package.json scripts (if not already there)
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint",
+  "type-check": "tsc --noEmit"
+}
+
+### 4. If using TypeScript, make sure tsconfig.json includes path aliases:
+"paths": {
+  "@/*": ["./src/*"],
+  "@/components/*": ["./src/components/*"],
+  "@/lib/*": ["./src/lib/*"]
+}
+
+### 5. Verify Setup
+npm run lint
+npm run type-check
+
+## File Checklist - Make Sure You Copied These:
+
+✅ .clinerules (root of project)
+✅ .eslintrc.json (root of project)  
+✅ .prettierrc (root of project)
+✅ src/lib/cn.ts
+✅ src/lib/constants.ts (customize this!)
+✅ src/lib/validations.ts (customize this!)
+✅ src/components/ui/Button.tsx
+
+## After Setup - Test It Works:
+
+1. Ask Cline: "Create a simple card component"
+2. Check if it follows the standards from .clinerules
+3. Check if TypeScript types are working
+4. Check if code formatting is consistent
+
+## Common Issues & Solutions:
+
+❌ "Cannot find module 'clsx'"
+✅ Run: npm install clsx tailwind-merge class-variance-authority zod
+
+❌ "Cannot resolve '@/lib/cn'"  
+✅ Check tsconfig.json has the path aliases configured
+
+❌ Code not following standards
+✅ Make sure .clinerules is in the root of your project
+
+❌ Formatting inconsistent
+✅ Make sure .eslintrc.json and .prettierrc are copied
+
+## Ready to Build!
+
+Your Next.js project now has enterprise-level standards built in.
+Every component Cline creates will be professional quality! 🚀

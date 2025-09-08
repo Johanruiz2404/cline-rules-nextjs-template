@@ -1,0 +1,34 @@
+{
+  "description": "Dependencies needed for Next.js Enterprise Template",
+  "required_dependencies": {
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^2.0.0", 
+    "class-variance-authority": "^0.7.0",
+    "zod": "^3.22.0"
+  },
+  "recommended_dev_dependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0",
+    "tailwindcss": "^3.3.0",
+    "postcss": "^8.4.0",
+    "autoprefixer": "^10.4.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "install_commands": {
+    "required": "npm install clsx tailwind-merge class-variance-authority zod",
+    "dev_dependencies": "npm install -D @types/node @types/react @types/react-dom eslint eslint-config-next prettier typescript tailwindcss postcss autoprefixer tailwindcss-animate"
+  },
+  "notes": {
+    "clsx": "Utility for constructing className strings conditionally",
+    "tailwind-merge": "Utility to merge Tailwind CSS classes without style conflicts",
+    "class-variance-authority": "Tool for building type-safe component APIs with variants",
+    "zod": "TypeScript-first schema validation with static type inference",
+    "tailwindcss": "Utility-first CSS framework for rapid UI development",
+    "tailwindcss-animate": "Animation utilities for Tailwind CSS"
+  }
+}

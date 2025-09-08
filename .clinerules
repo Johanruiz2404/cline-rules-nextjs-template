@@ -1,0 +1,525 @@
+# Cline Custom Instructions for Next.js Enterprise Development
+# Version: 2.0 - Enterprise Edition
+# Last Updated: 2025
+
+## CORE PRINCIPLES
+- Maintain pitch-perfect code quality with enterprise-level standards
+- Follow sophisticated industry best practices
+- Ensure optimal performance and accessibility
+- Create maintainable, scalable, and testable code
+- Implement advanced design patterns and architectural decisions
+
+## FILE SIZE CONSTRAINTS
+- JavaScript/TypeScript files: Maximum 700 lines
+- CSS files: Maximum 1100 lines
+- All other files: Maximum 1000 lines (except .md files)
+- Component files: Maximum 500 lines (encourage composition over large components)
+- Utility files: Maximum 300 lines (encourage single responsibility)
+
+## NEXT.JS ARCHITECTURE STANDARDS
+
+### Project Structure (Enterprise-Level)
+```
+src/
+├── app/                    # App Router (Next.js 13+)
+│   ├── (auth)/            # Route groups
+│   ├── api/               # API routes
+│   ├── globals.css        # Global styles
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Home page
+├── components/            # Reusable components
+│   ├── ui/               # Base UI components
+│   ├── forms/            # Form components
+│   ├── layout/           # Layout components
+│   └── features/         # Feature-specific components
+├── lib/                  # Utility libraries
+│   ├── utils.ts          # General utilities
+│   ├── validations.ts    # Zod schemas
+│   ├── constants.ts      # App constants
+│   └── types.ts          # TypeScript types
+├── hooks/                # Custom React hooks
+├── providers/            # Context providers
+├── styles/               # Additional styles
+└── utils/                # Helper functions
+```
+
+### Component Architecture
+- Use Server Components by default, Client Components only when necessary
+- Implement proper component composition patterns
+- Use forwardRef for components that need ref forwarding
+- Implement proper error boundaries for each feature
+- Use React.memo() for expensive components
+- Implement proper loading and error states
+
+### Advanced TypeScript Patterns
+```typescript
+// Use strict type definitions
+interface ComponentProps {
+  children: React.ReactNode;
+  className?: string;
+  variant?: 'primary' | 'secondary' | 'outline';
+}
+
+// Use generic types for reusable components
+interface DataTableProps<T> {
+  data: T[];
+  columns: Column<T>[];
+  onRowClick?: (row: T) => void;
+}
+
+// Use utility types
+type PartialUser = Partial<User>;
+type RequiredUser = Required<User>;
+type UserEmail = Pick<User, 'email'>;
+```
+
+## DESIGN SYSTEM EXCELLENCE
+
+### Tailwind CSS Best Practices
+- Use design tokens from tailwind.config.js
+- Implement consistent spacing scale (4px base unit)
+- Use semantic color names (primary, secondary, accent, etc.)
+- Implement responsive design mobile-first
+- Use CSS Grid and Flexbox appropriately
+- Implement dark mode support with class strategy
+
+### Component Variants System
+```typescript
+// Use class-variance-authority for component variants
+import { cva, type VariantProps } from 'class-variance-authority';
+
+const buttonVariants = cva(
+  'inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors',
+  {
+    variants: {
+      variant: {
+        default: 'bg-primary text-primary-foreground hover:bg-primary/90',
+        destructive: 'bg-destructive text-destructive-foreground hover:bg-destructive/90',
+        outline: 'border border-input hover:bg-accent hover:text-accent-foreground',
+      },
+      size: {
+        default: 'h-10 px-4 py-2',
+        sm: 'h-9 rounded-md px-3',
+        lg: 'h-11 rounded-md px-8',
+      },
+    },
+    defaultVariants: {
+      variant: 'default',
+      size: 'default',
+    },
+  }
+);
+```
+
+### Animation and Interaction Standards
+- Use Framer Motion for complex animations
+- Implement micro-interactions for better UX
+- Use CSS transitions for simple state changes
+- Implement proper loading states with skeletons
+- Use intersection observer for scroll-based animations
+- Implement proper focus management for accessibility
+
+## PERFORMANCE OPTIMIZATION
+
+### Image Optimization
+- Always use next/image for images
+- Implement proper alt text for accessibility
+- Use appropriate image formats (WebP, AVIF)
+- Implement lazy loading by default
+- Use placeholder blur for better perceived performance
+
+### Bundle Optimization
+- Use dynamic imports for code splitting
+- Implement proper tree shaking
+- Use next/bundle-analyzer for bundle analysis
+- Optimize third-party libraries
+- Implement proper caching strategies
+
+### Core Web Vitals Optimization
+- Optimize Largest Contentful Paint (LCP) < 2.5s
+- Optimize First Input Delay (FID) < 100ms
+- Optimize Cumulative Layout Shift (CLS) < 0.1
+- Use next/font for font optimization
+- Implement proper preloading strategies
+
+## CODE QUALITY STANDARDS
+
+### ESLint Configuration
+```json
+{
+  "extends": [
+    "next/core-web-vitals",
+    "@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error",
+    "prefer-const": "error",
+    "no-var": "error"
+  }
+}
+```
+
+### Import/Export Conventions
+- Use named exports for components
+- Use default exports only for pages
+- Group imports: external libraries, internal modules, relative imports
+- Use absolute imports with path aliases (@/components, @/lib, etc.)
+- Implement proper barrel exports for cleaner imports
+
+### Error Handling Patterns
+```typescript
+// Implement proper error boundaries
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+}
+
+// Use Result pattern for error handling
+type Result<T, E = Error> = 
+  | { success: true; data: T }
+  | { success: false; error: E };
+```
+
+## ACCESSIBILITY STANDARDS (WCAG 2.1 AA)
+
+### Semantic HTML
+- Use proper heading hierarchy (h1 → h6)
+- Use semantic HTML elements (nav, main, section, article)
+- Implement proper form labels and descriptions
+- Use ARIA attributes when necessary
+- Implement proper focus management
+
+### Keyboard Navigation
+- Ensure all interactive elements are keyboard accessible
+- Implement proper tab order
+- Use skip links for navigation
+- Implement proper focus indicators
+- Handle escape key for modals and dropdowns
+
+### Screen Reader Support
+- Provide meaningful alt text for images
+- Use aria-label and aria-describedby appropriately
+- Implement live regions for dynamic content
+- Use proper table headers and captions
+- Provide text alternatives for visual content
+
+## FORM HANDLING EXCELLENCE
+
+### React Hook Form + Zod Integration
+```typescript
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+
+const formSchema = z.object({
+  email: z.string().email('Invalid email address'),
+  password: z.string().min(8, 'Password must be at least 8 characters'),
+});
+
+type FormData = z.infer<typeof formSchema>;
+
+const MyForm = () => {
+  const form = useForm<FormData>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      email: '',
+      password: '',
+    },
+  });
+};
+```
+
+### Form Validation Patterns
+- Use Zod for schema validation
+- Implement real-time validation feedback
+- Use proper error message display
+- Implement loading states for form submission
+- Use optimistic updates where appropriate
+
+## STATE MANAGEMENT
+
+### React State Patterns
+- Use useState for local component state
+- Use useReducer for complex state logic
+- Use useContext for shared state (sparingly)
+- Implement proper state lifting patterns
+- Use React Query/SWR for server state
+
+### Advanced State Patterns
+```typescript
+// Use custom hooks for state logic
+const useCounter = (initialValue = 0) => {
+  const [count, setCount] = useState(initialValue);
+  
+  const increment = useCallback(() => setCount(c => c + 1), []);
+  const decrement = useCallback(() => setCount(c => c - 1), []);
+  const reset = useCallback(() => setCount(initialValue), [initialValue]);
+  
+  return { count, increment, decrement, reset };
+};
+
+// Use reducer pattern for complex state
+type State = {
+  loading: boolean;
+  data: any[];
+  error: string | null;
+};
+
+type Action = 
+  | { type: 'FETCH_START' }
+  | { type: 'FETCH_SUCCESS'; payload: any[] }
+  | { type: 'FETCH_ERROR'; payload: string };
+```
+
+## TESTING STANDARDS
+
+### Unit Testing with Jest
+- Test component behavior, not implementation
+- Use React Testing Library for component testing
+- Mock external dependencies appropriately
+- Test error states and edge cases
+- Maintain high test coverage (>80%)
+
+### Integration Testing
+- Test user workflows end-to-end
+- Use Playwright for E2E testing
+- Test accessibility with axe-core
+- Test performance with Lighthouse CI
+- Implement visual regression testing
+
+## SECURITY BEST PRACTICES
+
+### Content Security Policy
+```javascript
+// next.config.js
+const securityHeaders = [
+  {
+    key: 'Content-Security-Policy',
+    value: "default-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline';"
+  },
+  {
+    key: 'X-Frame-Options',
+    value: 'DENY'
+  },
+  {
+    key: 'X-Content-Type-Options',
+    value: 'nosniff'
+  }
+];
+```
+
+### Input Validation and Sanitization
+- Validate all user inputs with Zod
+- Sanitize HTML content with DOMPurify
+- Use parameterized queries for database operations
+- Implement proper authentication and authorization
+- Use HTTPS in production
+
+## API DESIGN STANDARDS
+
+### RESTful API Patterns
+```typescript
+// app/api/users/route.ts
+export async function GET(request: Request) {
+  try {
+    const users = await getUsers();
+    return NextResponse.json(users);
+  } catch (error) {
+    return NextResponse.json(
+      { error: 'Internal Server Error' },
+      { status: 500 }
+    );
+  }
+}
+
+export async function POST(request: Request) {
+  try {
+    const body = await request.json();
+    const validatedData = userSchema.parse(body);
+    const user = await createUser(validatedData);
+    return NextResponse.json(user, { status: 201 });
+  } catch (error) {
+    if (error instanceof z.ZodError) {
+      return NextResponse.json(
+        { error: 'Validation failed', details: error.errors },
+        { status: 400 }
+      );
+    }
+    return NextResponse.json(
+      { error: 'Internal Server Error' },
+      { status: 500 }
+    );
+  }
+}
+```
+
+### Error Handling in APIs
+- Use proper HTTP status codes
+- Provide meaningful error messages
+- Implement proper logging
+- Use rate limiting for security
+- Implement proper CORS configuration
+
+## DEPLOYMENT AND CI/CD
+
+### Environment Configuration
+- Use environment variables for configuration
+- Implement proper secrets management
+- Use different configs for dev/staging/production
+- Implement proper database migrations
+- Use feature flags for gradual rollouts
+
+### Performance Monitoring
+- Implement error tracking (Sentry)
+- Monitor Core Web Vitals
+- Track user analytics responsibly
+- Implement proper logging
+- Monitor API performance
+
+## DOCUMENTATION STANDARDS
+
+### Code Documentation
+- Use JSDoc for function documentation
+- Document complex business logic
+- Maintain up-to-date README files
+- Document API endpoints
+- Create component documentation with Storybook
+
+### Type Documentation
+```typescript
+/**
+ * Represents a user in the system
+ * @interface User
+ * @property {string} id - Unique identifier for the user
+ * @property {string} email - User's email address
+ * @property {string} name - User's display name
+ * @property {Date} createdAt - When the user was created
+ */
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  createdAt: Date;
+}
+```
+
+## ADVANCED PATTERNS
+
+### Compound Components
+```typescript
+const Card = ({ children, className, ...props }) => (
+  <div className={cn("rounded-lg border bg-card text-card-foreground shadow-sm", className)} {...props}>
+    {children}
+  </div>
+);
+
+const CardHeader = ({ children, className, ...props }) => (
+  <div className={cn("flex flex-col space-y-1.5 p-6", className)} {...props}>
+    {children}
+  </div>
+);
+
+Card.Header = CardHeader;
+Card.Content = CardContent;
+Card.Footer = CardFooter;
+```
+
+### Render Props Pattern
+```typescript
+interface RenderPropsComponent<T> {
+  children: (data: T, loading: boolean, error: Error | null) => React.ReactNode;
+  url: string;
+}
+
+const DataFetcher = <T,>({ children, url }: RenderPropsComponent<T>) => {
+  const { data, loading, error } = useFetch<T>(url);
+  return children(data, loading, error);
+};
+```
+
+## INTERNATIONALIZATION (i18n)
+
+### Next.js i18n Configuration
+```javascript
+// next.config.js
+module.exports = {
+  i18n: {
+    locales: ['en', 'es', 'fr'],
+    defaultLocale: 'en',
+    localeDetection: false,
+  },
+};
+```
+
+### Translation Patterns
+- Use next-i18next for translations
+- Implement proper locale routing
+- Use ICU message format for complex translations
+- Implement RTL support for Arabic/Hebrew
+- Test translations in different locales
+
+## MONITORING AND ANALYTICS
+
+### Performance Monitoring
+- Implement Web Vitals tracking
+- Monitor bundle size changes
+- Track API response times
+- Monitor error rates
+- Implement user session recording (with privacy)
+
+### Privacy-First Analytics
+- Use privacy-focused analytics tools
+- Implement proper cookie consent
+- Anonymize user data
+- Comply with GDPR/CCPA
+- Implement data retention policies
+
+## FINAL REMINDERS
+
+1. **Always prioritize user experience and accessibility**
+2. **Write self-documenting code with clear naming**
+3. **Implement proper error handling and loading states**
+4. **Test thoroughly across different devices and browsers**
+5. **Optimize for performance from the start**
+6. **Follow security best practices consistently**
+7. **Maintain consistent code style and patterns**
+8. **Document complex business logic and decisions**
+9. **Use TypeScript strictly - avoid 'any' types**
+10. **Keep components small, focused, and reusable**
+
+## EMERGENCY PROTOCOLS
+
+### When File Size Limits Are Exceeded
+1. Split large components into smaller, focused components
+2. Extract custom hooks for complex logic
+3. Move utility functions to separate files
+4. Use composition over inheritance
+5. Consider code splitting for large features
+
+### Performance Issues
+1. Use React DevTools Profiler to identify bottlenecks
+2. Implement proper memoization (React.memo, useMemo, useCallback)
+3. Optimize images and assets
+4. Review and optimize bundle size
+5. Implement proper caching strategies
+
+### Accessibility Violations
+1. Run axe-core accessibility tests
+2. Test with screen readers
+3. Verify keyboard navigation
+4. Check color contrast ratios
+5. Validate semantic HTML structure
+
+This configuration ensures enterprise-level, sophisticated, and industry-standard development practices for Next.js projects.
