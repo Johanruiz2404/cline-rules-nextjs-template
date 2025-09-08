@@ -4,127 +4,116 @@
 
 // Application metadata
 export const APP_CONFIG = {
-  name: 'AppML Locksmith',
-  description: 'Professional locksmith services in New York City',
+  name: 'Next.js Enterprise Template',
+  description: 'A sophisticated Next.js template with enterprise-level standards',
   version: '1.0.0',
-  author: 'AppML Team',
-  url: 'https://appml-locksmith.com',
+  author: 'Enterprise Team',
+  url: 'https://localhost:3000',
 } as const;
 
-// Contact information
+// Contact information template
 export const CONTACT_INFO = {
   phone: '(555) 123-4567',
-  email: 'info@appml-locksmith.com',
+  email: 'contact@example.com',
   address: {
-    street: '123 Main Street',
+    street: '123 Business Street',
     city: 'New York',
     state: 'NY',
     zipCode: '10001',
     country: 'United States',
   },
   businessHours: {
-    weekdays: '8:00 AM - 8:00 PM',
-    weekends: '9:00 AM - 6:00 PM',
-    emergency: '24/7 Emergency Service Available',
+    weekdays: '9:00 AM - 6:00 PM',
+    weekends: '10:00 AM - 4:00 PM',
+    timezone: 'EST',
   },
 } as const;
 
-// Service categories
+// Common service categories for business applications
 export const SERVICE_CATEGORIES = {
-  residential: 'Residential',
-  commercial: 'Commercial',
-  automotive: 'Automotive',
-  emergency: 'Emergency',
+  consulting: 'Consulting',
+  development: 'Development',
+  support: 'Support',
+  maintenance: 'Maintenance',
 } as const;
 
-// Service types
+// Common service types
 export const SERVICES = {
-  lockout: 'Emergency Lockout',
-  lockChange: 'Lock Change',
-  lockRepair: 'Lock Repair',
-  keyDuplication: 'Key Duplication',
-  smartLock: 'Smart Lock Installation',
-  securityUpgrade: 'Home Security Upgrade',
-  commercialSystems: 'Commercial Lock Systems',
-  autoKeyProgramming: 'Auto Key Programming',
+  webDevelopment: 'Web Development',
+  mobileApps: 'Mobile Applications',
+  consulting: 'Technical Consulting',
+  maintenance: 'System Maintenance',
+  support: 'Customer Support',
+  training: 'Training & Education',
 } as const;
 
-// NYC Boroughs
-export const BOROUGHS = {
-  manhattan: 'Manhattan',
-  brooklyn: 'Brooklyn',
-  queens: 'Queens',
-  bronx: 'Bronx',
-  statenIsland: 'Staten Island',
-} as const;
-
-// Response times
+// Response times for service requests
 export const RESPONSE_TIMES = {
-  emergency: '15-30 minutes',
-  standard: '1-2 hours',
-  scheduled: 'Same day or next day',
+  immediate: 'Within 1 hour',
+  urgent: '2-4 hours',
+  standard: '24-48 hours',
+  scheduled: 'Scheduled appointment',
 } as const;
 
-// Pricing tiers
+// Pricing tiers template
 export const PRICING_TIERS = {
   basic: {
-    name: 'Basic Service',
-    price: 75,
-    description: 'Standard locksmith services',
+    name: 'Basic Plan',
+    price: 99,
+    description: 'Essential features for small projects',
   },
-  premium: {
-    name: 'Premium Service',
-    price: 125,
-    description: 'Advanced security solutions',
+  professional: {
+    name: 'Professional Plan',
+    price: 199,
+    description: 'Advanced features for growing businesses',
   },
-  emergency: {
-    name: 'Emergency Service',
-    price: 150,
-    description: '24/7 emergency response',
+  enterprise: {
+    name: 'Enterprise Plan',
+    price: 399,
+    description: 'Full-featured solution for large organizations',
   },
 } as const;
 
-// Social media links
+// Social media links template
 export const SOCIAL_LINKS = {
-  facebook: 'https://facebook.com/appml-locksmith',
-  twitter: 'https://twitter.com/appml_locksmith',
-  instagram: 'https://instagram.com/appml_locksmith',
-  linkedin: 'https://linkedin.com/company/appml-locksmith',
-  youtube: 'https://youtube.com/c/appml-locksmith',
+  facebook: 'https://facebook.com/yourcompany',
+  twitter: 'https://twitter.com/yourcompany',
+  instagram: 'https://instagram.com/yourcompany',
+  linkedin: 'https://linkedin.com/company/yourcompany',
+  youtube: 'https://youtube.com/c/yourcompany',
 } as const;
 
 // SEO constants
 export const SEO_CONFIG = {
-  defaultTitle: 'Professional Locksmith Services in NYC | AppML Locksmith',
-  titleTemplate: '%s | AppML Locksmith',
+  defaultTitle: 'Next.js Enterprise Template',
+  titleTemplate: '%s | Next.js Enterprise Template',
   defaultDescription:
-    'Professional locksmith services in New York City. Emergency lockout, lock repair, key duplication, and security upgrades. Available 24/7.',
+    'A sophisticated Next.js template with enterprise-level standards, modern tooling, and best practices.',
   keywords: [
-    'locksmith',
-    'NYC locksmith',
-    'emergency lockout',
-    'lock repair',
-    'key duplication',
-    'security upgrade',
-    'commercial locksmith',
-    'residential locksmith',
-    'automotive locksmith',
+    'Next.js',
+    'React',
+    'TypeScript',
+    'Tailwind CSS',
+    'Enterprise',
+    'Template',
+    'Modern Web Development',
+    'Best Practices',
   ],
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'AppML Locksmith',
+    siteName: 'Next.js Enterprise Template',
   },
 } as const;
 
-// API endpoints
+// API endpoints template
 export const API_ENDPOINTS = {
+  auth: '/api/auth',
+  users: '/api/users',
   contact: '/api/contact',
-  quote: '/api/quote',
-  booking: '/api/booking',
-  reviews: '/api/reviews',
-  services: '/api/services',
-  areas: '/api/areas',
+  newsletter: '/api/newsletter',
+  analytics: '/api/analytics',
+  health: '/api/health',
 } as const;
 
 // Form validation constants
@@ -142,6 +131,10 @@ export const VALIDATION_RULES = {
   message: {
     minLength: 10,
     maxLength: 1000,
+  },
+  password: {
+    minLength: 8,
+    pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]/,
   },
 } as const;
 
@@ -183,23 +176,27 @@ export const ERROR_MESSAGES = {
   unauthorized: 'You are not authorized to perform this action.',
   notFound: 'The requested resource was not found.',
   serverError: 'Server error. Please try again later.',
+  timeout: 'Request timed out. Please try again.',
 } as const;
 
 // Success messages
 export const SUCCESS_MESSAGES = {
-  contactForm: 'Thank you for your message. We will get back to you soon!',
-  booking: 'Your booking has been confirmed. We will contact you shortly.',
-  newsletter: 'Successfully subscribed to our newsletter!',
-  review: 'Thank you for your review!',
+  saved: 'Changes saved successfully!',
+  created: 'Item created successfully!',
+  updated: 'Item updated successfully!',
+  deleted: 'Item deleted successfully!',
+  sent: 'Message sent successfully!',
+  subscribed: 'Successfully subscribed!',
 } as const;
 
 // Feature flags
 export const FEATURE_FLAGS = {
-  enableBooking: true,
-  enableReviews: true,
-  enableNewsletter: true,
-  enableChat: false,
   enableAnalytics: true,
+  enableNewsletter: true,
+  enableDarkMode: true,
+  enableNotifications: true,
+  enableChat: false,
+  enableBeta: false,
 } as const;
 
 // Cache durations (in seconds)
@@ -208,4 +205,30 @@ export const CACHE_DURATIONS = {
   medium: 3600, // 1 hour
   long: 86400, // 24 hours
   week: 604800, // 7 days
+} as const;
+
+// HTTP status codes
+export const HTTP_STATUS = {
+  OK: 200,
+  CREATED: 201,
+  NO_CONTENT: 204,
+  BAD_REQUEST: 400,
+  UNAUTHORIZED: 401,
+  FORBIDDEN: 403,
+  NOT_FOUND: 404,
+  METHOD_NOT_ALLOWED: 405,
+  CONFLICT: 409,
+  UNPROCESSABLE_ENTITY: 422,
+  TOO_MANY_REQUESTS: 429,
+  INTERNAL_SERVER_ERROR: 500,
+  BAD_GATEWAY: 502,
+  SERVICE_UNAVAILABLE: 503,
+} as const;
+
+// Environment types
+export const ENVIRONMENTS = {
+  DEVELOPMENT: 'development',
+  STAGING: 'staging',
+  PRODUCTION: 'production',
+  TEST: 'test',
 } as const;

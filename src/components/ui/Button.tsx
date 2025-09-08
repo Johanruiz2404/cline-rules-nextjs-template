@@ -11,19 +11,19 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          'bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700',
+          'bg-primary text-primary-foreground hover:bg-primary/90',
         destructive:
-          'bg-error-500 text-white hover:bg-error-600 active:bg-error-700',
+          'bg-destructive text-destructive-foreground hover:bg-destructive/90',
         outline:
-          'border border-primary-300 bg-transparent hover:bg-primary-50 hover:text-primary-700',
+          'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
         secondary:
-          'bg-secondary-100 text-secondary-900 hover:bg-secondary-200',
-        ghost: 'hover:bg-primary-50 hover:text-primary-700',
-        link: 'underline-offset-4 hover:underline text-primary-600',
+          'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+        ghost: 'hover:bg-accent hover:text-accent-foreground',
+        link: 'text-primary underline-offset-4 hover:underline',
         success:
-          'bg-success-500 text-white hover:bg-success-600 active:bg-success-700',
+          'bg-success-500 text-white hover:bg-success-600',
         warning:
-          'bg-warning-500 text-white hover:bg-warning-600 active:bg-warning-700',
+          'bg-warning-500 text-white hover:bg-warning-600',
       },
       size: {
         default: 'h-10 py-2 px-4',
@@ -64,7 +64,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       variant,
       size,
       fullWidth,
-      asChild = false,
       loading = false,
       leftIcon,
       rightIcon,

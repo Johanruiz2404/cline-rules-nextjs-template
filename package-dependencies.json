@@ -1,9 +1,12 @@
 {
   "description": "Dependencies needed for Next.js Enterprise Template",
   "required_dependencies": {
+    "next": "^15.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "clsx": "^2.0.0",
-    "tailwind-merge": "^2.0.0", 
-    "class-variance-authority": "^0.7.0",
+    "tailwind-merge": "^2.5.0", 
+    "class-variance-authority": "^0.8.0",
     "zod": "^3.22.0"
   },
   "recommended_dev_dependencies": {
@@ -11,17 +14,27 @@
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "eslint": "^8.0.0",
-    "eslint-config-next": "^14.0.0",
+    "eslint-config-next": "^15.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint-plugin-react": "^7.33.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
     "prettier": "^3.0.0",
     "typescript": "^5.0.0",
-    "tailwindcss": "^3.3.0",
+    "tailwindcss": "^3.4.0",
     "postcss": "^8.4.0",
     "autoprefixer": "^10.4.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "@tailwindcss/typography": "^0.5.15",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "postcss-import": "^16.0.0",
+    "postcss-nested": "^6.0.1",
+    "cssnano": "^7.0.0"
   },
   "install_commands": {
-    "required": "npm install clsx tailwind-merge class-variance-authority zod",
-    "dev_dependencies": "npm install -D @types/node @types/react @types/react-dom eslint eslint-config-next prettier typescript tailwindcss postcss autoprefixer tailwindcss-animate"
+    "required": "npm install next react react-dom clsx tailwind-merge class-variance-authority zod",
+    "dev_dependencies": "npm install -D @types/node @types/react @types/react-dom eslint eslint-config-next @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y prettier typescript tailwindcss postcss autoprefixer tailwindcss-animate @tailwindcss/typography @tailwindcss/container-queries postcss-import postcss-nested cssnano"
   },
   "notes": {
     "clsx": "Utility for constructing className strings conditionally",
@@ -29,6 +42,11 @@
     "class-variance-authority": "Tool for building type-safe component APIs with variants",
     "zod": "TypeScript-first schema validation with static type inference",
     "tailwindcss": "Utility-first CSS framework for rapid UI development",
-    "tailwindcss-animate": "Animation utilities for Tailwind CSS"
+    "tailwindcss-animate": "Animation utilities for Tailwind CSS",
+    "@tailwindcss/typography": "Beautiful typographic defaults for HTML you don't control",
+    "@tailwindcss/container-queries": "Container query utilities for responsive design",
+    "postcss-import": "PostCSS plugin to transform @import rules by inlining content",
+    "postcss-nested": "PostCSS plugin to unwrap nested rules like Sass",
+    "cssnano": "Modern CSS minifier for production optimization"
   }
 }

@@ -21,6 +21,9 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+debug-comprehensive-test.js
+COMPREHENSIVE-DEBUG-REPORT.json
+*-TEST-REPORT.md
 
 # Local env files
 .env*.local
@@ -82,3 +85,11 @@ pids
 # Temporary folders
 tmp/
 temp/
+
+# Additional IDE files
+.fleet/
+*.sublime-*
+
+# Additional cache directories
+.turbo/
+.swc/
