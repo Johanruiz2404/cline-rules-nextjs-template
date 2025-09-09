@@ -9,6 +9,27 @@
 
 ![Next.js Enterprise Template](Screenshot.png)
 
+## ⚡ INSTANT SETUP FOR AI ASSISTANTS (CLINE)
+
+> 🚀 **Save Hours of Setup Time!** Get this entire enterprise template configured in seconds
+
+### 🤖 One-Command Setup
+Simply copy and paste this into your AI Assistant:
+
+```
+Set up this enterprise Next.js template: https://github.com/alicodex/cline-rules-nextjs-template
+
+Clone it, install dependencies, and apply the .clinerules.md file as workspace rules for enterprise-level coding standards.
+```
+
+**✅ What you get instantly:**
+- Complete Next.js workspace with TypeScript
+- Enterprise coding standards automatically applied
+- All dependencies installed and configured
+- Ready-to-code development environment
+
+---
+
 ## ✨ Features
 
 - **🚀 Next.js 15.5.2** - Latest App Router with React 19
@@ -225,3 +246,4 @@ This project is licensed under the ISC License - see the [LICENSE](LICENSE) file
 ---
 
 **Built with ❤️ for enterprise-level Next.js development**
+ed this temp
