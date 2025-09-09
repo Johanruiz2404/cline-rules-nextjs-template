@@ -245,6 +245,65 @@ This project is licensed under the ISC License - see the [LICENSE](LICENSE) file
 - **Vercel** - For the deployment platform
 - **TypeScript Team** - For type safety and developer experience
 
+## 🔧 Troubleshooting
+
+### ❓ "Why do I see .git and .github folders?"
+**This is completely normal!** These folders appear in every Git repository:
+- **`.git`** - Contains Git history and metadata, essential for version control
+- **`.github`** - Contains GitHub workflows, issue templates, and configurations
+- Both folders are necessary for Git functionality and should not be removed
+
+### ❓ "What should my project look like after successful setup?"
+After AI Assistant completes the setup, you should see:
+- **~478 dependencies** installed with zero vulnerabilities
+- **`.clinerules.md`** file containing your enterprise coding standards
+- **`node_modules/`** folder (after npm install)
+- **`.next/`** folder (after first build/dev server start)
+- **All configuration files**: `.eslintrc.json`, `tailwind.config.js`, `tsconfig.json`, etc.
+- **Source code** in the `src/` directory
+
+### ❓ "How do I know the setup worked correctly?"
+Look for these success indicators:
+- ✅ **Custom folder name** created (if you specified one in your prompt)
+- ✅ **All dependencies installed** without errors or vulnerabilities
+- ✅ **Enterprise rules applied** - Cline confirms `.clinerules.md` is active as workspace rules
+- ✅ **Development server starts** successfully with `npm run dev`
+- ✅ **TypeScript compilation** works without errors
+- ✅ **ESLint and Prettier** configurations are active
+
+### ❓ "Are all these files supposed to be here?"
+Yes! Every file serves an important purpose:
+- **Configuration files** (`.eslintrc.json`, `tailwind.config.js`, etc.) - Project setup and tooling
+- **Package files** (`package.json`, `package-lock.json`) - Dependency management
+- **Git files** (`.git/`, `.github/`, `.gitignore`) - Version control and GitHub features
+- **Build files** (`.next/`, `node_modules/`) - Generated during setup and development
+- **Source code** (`src/`) - Your application code and components
+
+### ❓ "The setup seems to have too many files, is this normal?"
+Absolutely! This is an **enterprise-level template** with:
+- Complete TypeScript configuration
+- Comprehensive ESLint and Prettier setup
+- Full Tailwind CSS design system
+- Next.js optimizations and configurations
+- Security headers and best practices
+- Accessibility standards and testing tools
+
+A professional development environment requires many configuration files to ensure code quality, performance, and maintainability.
+
+### 🚨 Common Issues & Solutions
+
+**Issue**: "Command not found" errors
+- **Solution**: Make sure you're in the correct project directory and run `npm install`
+
+**Issue**: TypeScript errors on first run
+- **Solution**: Run `npm run build` to generate type definitions
+
+**Issue**: Styles not loading correctly
+- **Solution**: Restart the development server with `npm run dev`
+
+**Issue**: ESLint warnings about file formatting
+- **Solution**: Run `npm run lint:fix` to auto-fix formatting issues
+
 ## 📞 Support
 
 - **Issues**: [GitHub Issues](https://github.com/alicodex/cline-rules-nextjs-template/issues)
