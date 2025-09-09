@@ -112,6 +112,13 @@ src/
 - **`tsconfig.json`** - Strict TypeScript configuration
 - **`.eslintrc.json`** - ESLint rules with accessibility and TypeScript support
 
+### Cline AI Configuration
+- **`.clinerules.md`** - Enterprise-level Cline custom instructions for Next.js development
+  - Contains comprehensive coding standards and best practices
+  - Includes file size constraints, architecture patterns, and quality guidelines
+  - Provides TypeScript patterns, accessibility standards, and performance optimization rules
+  - **Note**: Renamed from `.clinerules` to avoid conflicts with Cline's local directory structure
+
 ### Package Management
 - **`package.json`** - Dependencies and scripts
 - **`package-dependencies.json`** - Detailed dependency documentation
