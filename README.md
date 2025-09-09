@@ -13,20 +13,25 @@
 
 > 🚀 **Save Hours of Setup Time!** Get this entire enterprise template configured in seconds
 
-### 🤖 One-Command Setup
-Simply copy and paste this into your AI Assistant:
+### 🤖 Secure Setup Options
 
+**Option 1 - Recommended (Git Reinitialization):**
 ```
 Set up this enterprise Next.js template: https://github.com/alicodex/cline-rules-nextjs-template
 
-Clone it, install dependencies, and apply the .clinerules.md file as workspace rules for enterprise-level coding standards.
+Clone it, remove the existing Git history, initialize a fresh Git repository, install dependencies, and apply the .clinerules.md file as workspace rules for enterprise-level coding standards.
 ```
 
-💡 **Want a custom folder name?** Add this to your prompt:
+**Option 2 - Clean Download (Degit):**
 ```
-Set up this enterprise Next.js template in a folder called "my-project-name": https://github.com/alicodex/cline-rules-nextjs-template
+Use degit to download this enterprise Next.js template without Git history: https://github.com/alicodex/cline-rules-nextjs-template
 
-Clone it, install dependencies, and apply the .clinerules.md file as workspace rules for enterprise-level coding standards.
+Then initialize a new Git repository, install dependencies, and apply the .clinerules.md file as workspace rules for enterprise-level coding standards.
+```
+
+💡 **Want a custom folder name?** Add this to either prompt:
+```
+Set up this enterprise Next.js template in a folder called "my-project-name": [use one of the above approaches]
 ```
 
 **✅ What you get instantly:**
@@ -34,6 +39,25 @@ Clone it, install dependencies, and apply the .clinerules.md file as workspace r
 - Enterprise coding standards automatically applied
 - All dependencies installed and configured
 - Ready-to-code development environment
+
+## 🚨 IMPORTANT: Git Repository Security
+
+> ⚠️ **Critical Security Notice**: If you use regular `git clone`, your project will be connected to our template repository. This means your changes could accidentally be pushed to our repository!
+
+### 🛡️ Why This Matters:
+- **Privacy Risk**: Your personal code could become visible in our public template
+- **Security Risk**: Accidental commits to the wrong repository
+- **Confusion**: Your project history will include our template development
+
+### ✅ How to Stay Safe:
+1. **Use our secure prompts above** - They handle Git reinitialization automatically
+2. **Or manually reinitialize Git** after cloning (see troubleshooting section)
+3. **Always verify** your Git remote points to YOUR repository, not ours
+
+### 🔍 Quick Verification:
+After setup, run: `git remote -v`
+- ❌ **Bad**: Points to `alicodex/cline-rules-nextjs-template`
+- ✅ **Good**: Points to your own repository or shows no remotes
 
 ---
 
@@ -71,10 +95,21 @@ Clone it, install dependencies, and apply the .clinerules.md file as workspace r
 
 ## 🚀 Quick Start
 
+> ⚠️ **Security Warning**: The manual approach below will connect your project to our template repository. Use the [AI Assistant setup](#-instant-setup-for-ai-assistants-cline) above for secure, automated setup.
+
+### Manual Setup (Requires Git Reinitialization)
 ```bash
 # Clone the repository
 git clone https://github.com/alicodex/cline-rules-nextjs-template.git
 cd nextjs-template
+
+# 🚨 IMPORTANT: Remove template Git history
+rm -rf .git
+
+# Initialize your own Git repository
+git init
+git add .
+git commit -m "Initial commit from Next.js enterprise template"
 
 # Install dependencies
 npm install
@@ -300,7 +335,47 @@ Absolutely! This is an **enterprise-level template** with:
 
 A professional development environment requires many configuration files to ensure code quality, performance, and maintainability.
 
-### 🚨 Common Issues & Solutions
+### 🚨 Git Repository Issues & Solutions
+
+**Issue**: "My Git remote points to the template repository"
+- **Problem**: Your project is connected to our template repository
+- **Solution**: Reinitialize Git with these commands:
+  ```bash
+  # Remove existing Git history
+  rm -rf .git
+  
+  # Initialize fresh Git repository
+  git init
+  
+  # Add your files
+  git add .
+  
+  # Make initial commit
+  git commit -m "Initial commit from Next.js enterprise template"
+  
+  # Add your own remote (replace with your repository URL)
+  git remote add origin https://github.com/yourusername/your-repo.git
+  ```
+
+**Issue**: "I accidentally pushed to the template repository"
+- **Problem**: Your changes appeared in our template repository
+- **Solution**: Contact us immediately via GitHub Issues so we can help clean up
+
+**Issue**: "How do I verify my Git setup is correct?"
+- **Solution**: Run these verification commands:
+  ```bash
+  # Check remote URLs (should be YOUR repository, not ours)
+  git remote -v
+  
+  # Check Git configuration
+  git config user.name
+  git config user.email
+  
+  # Check current branch and status
+  git status
+  ```
+
+### 🚨 Common Development Issues & Solutions
 
 **Issue**: "Command not found" errors
 - **Solution**: Make sure you're in the correct project directory and run `npm install`
