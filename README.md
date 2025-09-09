@@ -253,6 +253,16 @@ This project is licensed under the ISC License - see the [LICENSE](LICENSE) file
 - **`.github`** - Contains GitHub workflows, issue templates, and configurations
 - Both folders are necessary for Git functionality and should not be removed
 
+### ❓ "Why do I see a .clinerules folder?"
+**This is expected and beneficial!** Cline creates this local configuration folder:
+- **`.clinerules/` folder** - Cline's local workspace configuration (hidden folder, created by Cline)
+- **`.clinerules.md` file** - Your enterprise rules template (part of this repository)
+- **Why both exist**: They work together but serve different purposes:
+  - The `.clinerules/` folder contains Cline's local workspace settings
+  - The `.clinerules.md` file contains the enterprise coding standards to be applied
+- **Git behavior**: The folder is automatically ignored (thanks to .gitignore), the file is tracked
+- **User benefit**: This separation prevents conflicts and allows Cline to manage its own configuration while preserving your enterprise standards
+
 ### ❓ "What should my project look like after successful setup?"
 After AI Assistant completes the setup, you should see:
 - **~478 dependencies** installed with zero vulnerabilities
