@@ -22,6 +22,13 @@ Set up this enterprise Next.js template: https://github.com/alicodex/cline-rules
 Clone it, install dependencies, and apply the .clinerules.md file as workspace rules for enterprise-level coding standards.
 ```
 
+💡 **Want a custom folder name?** Add this to your prompt:
+```
+Set up this enterprise Next.js template in a folder called "my-project-name": https://github.com/alicodex/cline-rules-nextjs-template
+
+Clone it, install dependencies, and apply the .clinerules.md file as workspace rules for enterprise-level coding standards.
+```
+
 **✅ What you get instantly:**
 - Complete Next.js workspace with TypeScript
 - Enterprise coding standards automatically applied
