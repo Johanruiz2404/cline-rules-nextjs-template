@@ -93,3 +93,6 @@ temp/
 # Additional cache directories
 .turbo/
 .swc/
+
+# Cline configuration directory (to avoid conflicts with .clinerules.md)
+.clinerules
