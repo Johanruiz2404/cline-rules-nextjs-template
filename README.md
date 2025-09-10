@@ -2,7 +2,7 @@
 
 **A comprehensive Next.js template with enterprise-level Cline rules that saves you hours of setup time**
 
-[![Version](https://img.shields.io/badge/Version-v1.0.1-green)](https://github.com/alicodex/cline-rules-nextjs-template/releases)
+[![Version](https://img.shields.io/badge/Version-v2.1-green)](https://github.com/alicodex/cline-rules-nextjs-template/releases)
 [![Stability](https://img.shields.io/badge/Stability-Stable-brightgreen)](https://github.com/alicodex/cline-rules-nextjs-template)
 [![Build Status](https://img.shields.io/badge/Build-Passing-success)](https://github.com/alicodex/cline-rules-nextjs-template)
 [![Security](https://img.shields.io/badge/Security-Enhanced-blue)](https://github.com/alicodex/cline-rules-nextjs-template)
@@ -268,6 +268,7 @@ src/
   - Includes file size constraints, architecture patterns, and quality guidelines
   - Provides TypeScript patterns, accessibility standards, and performance optimization rules
   - **Note**: This project uses `.clinerules.md` for project-specific Cline AI Assistant instructions to avoid conflicts with Cline's local configuration system. It is tracked in Git.
+  - **Updated for AI-Optimized Development**: This file has been significantly enhanced with AI-optimized file size constraints, detailed AI-assisted development protocols, and comprehensive component decomposition strategies to improve debugging, code quality, and development velocity when working with AI assistants.
 
 ### Package Management
 - **`package.json`** - Dependencies and scripts
