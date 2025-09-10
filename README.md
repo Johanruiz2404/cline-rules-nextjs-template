@@ -2,7 +2,7 @@
 
 **A comprehensive Next.js template with enterprise-level Cline rules that saves you hours of setup time**
 
-[![Version](https://img.shields.io/badge/Version-v2.1-green)](https://github.com/alicodex/cline-rules-nextjs-template/releases)
+[![Version](https://img.shields.io/badge/Version-v2.1.0-green)](https://github.com/alicodex/cline-rules-nextjs-template/releases)
 [![Stability](https://img.shields.io/badge/Stability-Stable-brightgreen)](https://github.com/alicodex/cline-rules-nextjs-template)
 [![Build Status](https://img.shields.io/badge/Build-Passing-success)](https://github.com/alicodex/cline-rules-nextjs-template)
 [![Security](https://img.shields.io/badge/Security-Enhanced-blue)](https://github.com/alicodex/cline-rules-nextjs-template)
@@ -82,43 +82,6 @@ Clean up this Next.js template for my new project: Remove template files (Screen
 
 This will help you start with a clean slate for your new project, free from template-specific clutter.
 
-## 🧹 Post-Setup Cleanup
-
-When you clone this template, it includes some files that are specific to the template repository and not needed for your new project. This section guides you on how to clean up your project after initial setup.
-
-### Files to Remove
-
-The following files are part of the template and should be removed from your new project:
-
--   `Screenshot.png`: The screenshot of the template's demo application.
--   `CONTRIBUTING.md`: Guidelines for contributing to the template repository.
--   `LICENSE`: The license file for the template repository (you should add your own project's license).
--   `setup-commands.txt`: A file containing setup commands specific to the template.
-
-### Manual Cleanup Commands
-
-You can use the following commands in your terminal to remove these files:
-
-```bash
-# Remove template-specific files
-rm Screenshot.png CONTRIBUTING.md LICENSE setup-commands.txt
-
-# Create your own README (backup template README first if needed)
-# This command renames the current README.md to README-template-backup.md
-# You can then create a new README.md for your project.
-mv README.md README-template-backup.md
-```
-
-### AI Assistant Cleanup Prompt
-
-For an automated cleanup, you can use the following prompt with your AI Assistant (e.g., Cline):
-
-```
-Clean up this Next.js template for my new project: Remove template files (Screenshot.png, CONTRIBUTING.md, LICENSE, setup-commands.txt) and prepare the project for my own development.
-```
-
-This will help you start with a clean slate for your new project, free from template-specific clutter.
-
 ## 🚨 IMPORTANT: Git Repository Security
 
 > ⚠️ **Critical Security Notice**: If you use regular `git clone`, your project will be connected to our template repository. This means your changes could accidentally be pushed to our repository!
@@ -142,7 +105,7 @@ After setup, run: `git remote -v`
 
 ## ✨ Features
 
-- **🚀 Next.js 15.5.2** - Latest App Router with React 19
+- **🚀 Next.js 15.5.2** - Latest App Router with React 19.1.1
 - **📘 TypeScript** - Strict configuration with enterprise-level type safety
 - **🎨 Tailwind CSS** - Comprehensive design system with custom components
 - **🔧 PostCSS** - Optimized CSS processing pipeline
@@ -153,7 +116,7 @@ After setup, run: `git remote -v`
 - **⚡ Performance** - Optimized for Core Web Vitals
 - **🔒 Security** - Built-in security headers and best practices
 
-## 🎯 Stable Release v1.0.0
+## 🎯 Stable Release v2.1.0
 
 ### 🎉 **Production Ready - Stable Build**
 - **Enterprise Grade**: Fully tested and validated for production use
