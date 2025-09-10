@@ -1,6 +1,6 @@
 {
   "name": "nextjs-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "**A comprehensive Next.js template with enterprise-level Cline rules that saves you hours of setup time**",
   "main": "next.config.js",
   "scripts": {

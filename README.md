@@ -2,7 +2,7 @@
 
 **A comprehensive Next.js template with enterprise-level Cline rules that saves you hours of setup time**
 
-[![Version](https://img.shields.io/badge/Version-v1.0.0-green)](https://github.com/alicodex/cline-rules-nextjs-template/releases)
+[![Version](https://img.shields.io/badge/Version-v1.0.1-green)](https://github.com/alicodex/cline-rules-nextjs-template/releases)
 [![Stability](https://img.shields.io/badge/Stability-Stable-brightgreen)](https://github.com/alicodex/cline-rules-nextjs-template)
 [![Build Status](https://img.shields.io/badge/Build-Passing-success)](https://github.com/alicodex/cline-rules-nextjs-template)
 [![Security](https://img.shields.io/badge/Security-Enhanced-blue)](https://github.com/alicodex/cline-rules-nextjs-template)
@@ -44,6 +44,80 @@ Set up this enterprise Next.js template in a folder called "my-project-name": [u
 - Enterprise coding standards automatically applied
 - All dependencies installed and configured
 - Ready-to-code development environment
+
+## 🧹 Post-Setup Cleanup
+
+When you clone this template, it includes some files that are specific to the template repository and not needed for your new project. This section guides you on how to clean up your project after initial setup.
+
+### Files to Remove
+
+The following files are part of the template and should be removed from your new project:
+
+-   `Screenshot.png`: The screenshot of the template's demo application.
+-   `CONTRIBUTING.md`: Guidelines for contributing to the template repository.
+-   `LICENSE`: The license file for the template repository (you should add your own project's license).
+-   `setup-commands.txt`: A file containing setup commands specific to the template.
+
+### Manual Cleanup Commands
+
+You can use the following commands in your terminal to remove these files:
+
+```bash
+# Remove template-specific files
+rm Screenshot.png CONTRIBUTING.md LICENSE setup-commands.txt
+
+# Create your own README (backup template README first if needed)
+# This command renames the current README.md to README-template-backup.md
+# You can then create a new README.md for your project.
+mv README.md README-template-backup.md
+```
+
+### AI Assistant Cleanup Prompt
+
+For an automated cleanup, you can use the following prompt with your AI Assistant (e.g., Cline):
+
+```
+Clean up this Next.js template for my new project: Remove template files (Screenshot.png, CONTRIBUTING.md, LICENSE, setup-commands.txt) and prepare the project for my own development.
+```
+
+This will help you start with a clean slate for your new project, free from template-specific clutter.
+
+## 🧹 Post-Setup Cleanup
+
+When you clone this template, it includes some files that are specific to the template repository and not needed for your new project. This section guides you on how to clean up your project after initial setup.
+
+### Files to Remove
+
+The following files are part of the template and should be removed from your new project:
+
+-   `Screenshot.png`: The screenshot of the template's demo application.
+-   `CONTRIBUTING.md`: Guidelines for contributing to the template repository.
+-   `LICENSE`: The license file for the template repository (you should add your own project's license).
+-   `setup-commands.txt`: A file containing setup commands specific to the template.
+
+### Manual Cleanup Commands
+
+You can use the following commands in your terminal to remove these files:
+
+```bash
+# Remove template-specific files
+rm Screenshot.png CONTRIBUTING.md LICENSE setup-commands.txt
+
+# Create your own README (backup template README first if needed)
+# This command renames the current README.md to README-template-backup.md
+# You can then create a new README.md for your project.
+mv README.md README-template-backup.md
+```
+
+### AI Assistant Cleanup Prompt
+
+For an automated cleanup, you can use the following prompt with your AI Assistant (e.g., Cline):
+
+```
+Clean up this Next.js template for my new project: Remove template files (Screenshot.png, CONTRIBUTING.md, LICENSE, setup-commands.txt) and prepare the project for my own development.
+```
+
+This will help you start with a clean slate for your new project, free from template-specific clutter.
 
 ## 🚨 IMPORTANT: Git Repository Security
 
@@ -193,11 +267,47 @@ src/
   - Contains comprehensive coding standards and best practices
   - Includes file size constraints, architecture patterns, and quality guidelines
   - Provides TypeScript patterns, accessibility standards, and performance optimization rules
-  - **Note**: Renamed from `.clinerules` to avoid conflicts with Cline's local directory structure
+  - **Note**: This project uses `.clinerules.md` for project-specific Cline AI Assistant instructions to avoid conflicts with Cline's local configuration system. It is tracked in Git.
 
 ### Package Management
 - **`package.json`** - Dependencies and scripts
 - **`package-dependencies.json`** - Detailed dependency documentation
+
+## 🤖 Cline AI Configuration
+
+### About .clinerules vs .clinerules.md
+
+This project uses `.clinerules.md` for project-specific Cline AI Assistant instructions to avoid conflicts with Cline's local configuration system.
+
+#### Why .clinerules.md instead of .clinerules?
+
+- **Cline's Local System**: Uses `.clinerules/` as a directory for global configuration
+- **Project-Specific**: We use `.clinerules.md` as a file for this project's instructions
+- **Conflict Prevention**: `.clinerules` is gitignored to prevent local/remote conflicts
+
+### For Users Cloning This Repository
+
+1. **If you see .clinerules as a folder**: This is normal if you have Cline installed locally
+2. **If you see .clinerules as a file**: This might be a display issue in your editor
+3. **The actual project configuration**: Is in `.clinerules.md` (always a file)
+
+### Setup Instructions
+
+1. Clone the repository normally
+2. The project's Cline instructions are in `.clinerules.md`
+3. Cline will automatically detect and use these instructions
+4. Your local Cline configuration remains separate and unaffected
+
+### Technical Details
+
+- **Project instructions**: `.clinerules.md` (tracked in Git)
+- **Local Cline config**: `.clinerules/` directory (gitignored)
+- **No conflicts**: Different names prevent system conflicts
+
+This setup ensures that:
+- Project-specific Cline instructions are shared with all contributors
+- Local Cline configurations remain private and separate
+- No file/directory naming conflicts occur during Git operations
 
 ## 🧪 Testing & Quality Assurance
 
@@ -296,10 +406,15 @@ This project is licensed under the ISC License - see the [LICENSE](LICENSE) file
 ## 🔧 Troubleshooting
 
 ### ❓ "Why do I see .git and .github folders?"
-**This is completely normal!** These folders appear in every Git repository:
-- **`.git`** - Contains Git history and metadata, essential for version control
-- **`.github`** - Contains GitHub workflows, issue templates, and configurations
-- Both folders are necessary for Git functionality and should not be removed
+**This is normal, but requires special handling for this template:**
+- **`.git`** - Contains Git history and metadata from the template repository
+- **`.github`** - Contains GitHub workflows and configurations from the template
+
+**⚠️ IMPORTANT FOR THIS TEMPLATE:**
+- **You MUST remove the `.git` folder** to avoid connecting to our template repository
+- **You can keep `.github`** if you want the workflows, or remove it if you prefer your own
+- **This is different from normal repositories** where you keep .git folders
+- **See our security section above** for why this template requires special Git handling
 
 ### ❓ "Why do I see a .clinerules folder?"
 **This is expected and beneficial!** Cline creates this local configuration folder:
@@ -310,6 +425,14 @@ This project is licensed under the ISC License - see the [LICENSE](LICENSE) file
   - The `.clinerules.md` file contains the enterprise coding standards to be applied
 - **Git behavior**: The folder is automatically ignored (thanks to .gitignore), the file is tracked
 - **User benefit**: This separation prevents conflicts and allows Cline to manage its own configuration while preserving your enterprise standards
+
+### ❓ "Troubleshooting Cline Configuration Conflicts"
+If you experience conflicts with Cline's configuration:
+
+1. **Check file vs directory**: Run `ls -la | grep clinerules` in the project root
+2. **Expected output**: Should show `.clinerules.md` as a file
+3. **If you see .clinerules directory**: Delete it and pull the latest changes
+4. **VSCode display issues**: Restart VSCode if tabs show incorrect file names
 
 ### ❓ "What should my project look like after successful setup?"
 After AI Assistant completes the setup, you should see:
@@ -410,4 +533,3 @@ A professional development environment requires many configuration files to ensu
 ---
 
 **Built with ❤️ for enterprise-level Next.js development**
-ed this temp
